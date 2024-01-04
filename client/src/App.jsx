@@ -8,12 +8,9 @@ function App() {
   const [trips, setTrips] = useState([]);
   const [userInput, setUserInput] = useState("");
 
-  console.log(userInput);
-  console.log(trips);
-
   useEffect(() => {
     getTrips();
-  }, []);
+  }, [userInput]);
 
   const getTrips = async () => {
     const result = await axios.get(
@@ -30,17 +27,19 @@ function App() {
       url={trip.url}
       photos={trip.photos}
       description={trip.description}
+      getTrips={getTrips}
+      setUserInput={setUserInput}
     />
   ));
 
   return (
-    <div className="App">
+    <div className="app">
       <Input
         userInput={userInput}
         setUserInput={setUserInput}
         getTrips={getTrips}
       />
-      {tripsElements}
+      <div className="trips--container">{tripsElements}</div>
     </div>
   );
 }

@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.app {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.input {
+  width: 800px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input--header {
+  font-size: 36px;
+}
+
+label {
+  margin-bottom: 12px;
+}
+
+input {
+  padding: 12px;
+  border: none;
+  text-align: center;
+}
+
+.input > form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Kanit", sans-serif;
+}
+
+.trips--container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.trip {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.trip > img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  flex: 0 0 auto;
+}
+
+.trip--info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.trip--info_img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.trip--info_header {
+  font-size: 1.25rem;
+}
+
+.trip--info_desc,
+.trip--info_tags {
+  font-size: 1rem;
+  color: gray;
+}
+
+.trip--info_img-container {
+  display: flex;
+  gap: 16px;
+}
+
+.trip--info_tag {
+  display: inline-block;
+  margin-right: 4px;
+  text-decoration: underline;
+  cursor: pointer;
+}
